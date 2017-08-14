@@ -87,8 +87,12 @@ unserialize_string( GByteArray* b, int* offset )
 			break;
 	}
 
-	r = s->str;
-	g_string_free(s, 0);
+	r = malloc(s->len + 1);
+	strcpy(r, s->str);
+	g_string_free(s, 1);
+
+	//r = s->str;
+	//g_string_free(s, 0);
 
 	return r;
 }
