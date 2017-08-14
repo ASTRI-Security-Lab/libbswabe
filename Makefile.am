@@ -15,13 +15,13 @@ libbswabe_la_SOURCES = core.c misc.c
 include_HEADERS = bswabe.h
 
 # Linker options libTestProgram
-libbswabe_la_LDFLAGS = -no-undefined \
+libbswabe_la_LDFLAGS = \
 -L$(top_srcdir)/../openssl_install/lib \
 -L$(top_srcdir)/../gmp_install/lib \
 -L$(top_srcdir)/../glib_install/lib \
 -L$(top_srcdir)/../pbc_install/lib
 
-libbswabe_la_LIBADD = -lglib-2.0 -lgmp -lpbc -lcrypto
+libbswabe_la_LIBADD = -lglib-2.0.0 -lgmp -lpbc -lcrypto
 
 # Compiler options. Here we are adding the include directory
 # to be searched for headers included in the source code.
