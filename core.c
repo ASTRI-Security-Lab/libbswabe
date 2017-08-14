@@ -72,7 +72,7 @@ bswabe_setup( bswabe_pub_t** pub, bswabe_msk_t** msk )
 	*pub = malloc(sizeof(bswabe_pub_t));
 	*msk = malloc(sizeof(bswabe_msk_t));
 
-	(*pub)->pairing_desc = strdup(TYPE_A_PARAMS);
+	(*pub)->pairing_desc = _strdup(TYPE_A_PARAMS);
 	pairing_init_set_buf((*pub)->p, (*pub)->pairing_desc, strlen((*pub)->pairing_desc));
 
 	element_init_G1((*pub)->g,           (*pub)->p);
@@ -161,7 +161,7 @@ base_node( int k, char* s )
 
 	p = (bswabe_policy_t*) malloc(sizeof(bswabe_policy_t));
 	p->k = k;
-	p->attr = s ? strdup(s) : 0;
+	p->attr = s ? _strdup(s) : 0;
 	p->children = g_ptr_array_new();
 	p->q = 0;
 
