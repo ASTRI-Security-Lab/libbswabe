@@ -89,7 +89,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(ProjectDir)..\..\..\..\dependencies_win\openssl_1.1.0f_win32\include;$(ProjectDir)..\..\..\..\dependencies\mpir\build.vc14\lib_mpir_gc\Win32\Release;$(ProjectDir)..\..\..\..\dependencies_win\glib-dev_2.34.3-1_win32\lib\glib-2.0\include;$(ProjectDir)..\..\..\..\dependencies\pbc\include;$(ProjectDir)..\..\..\..\dependencies_win\glib-dev_2.34.3-1_win32\include\glib-2.0;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\..\..\..\dependencies_win\glib-dev_2.34.3-1_win32\lib;$(ProjectDir)..\..\..\pbc\pbcwin\lib\Win32\Release;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(ProjectDir)..\..\..\..\dependencies_win\glib-dev_2.34.3-1_win32\lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)\lib\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -135,7 +135,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalDependencies>glib-2.0.lib;pbclib.lib</AdditionalDependencies>
+      <AdditionalDependencies>glib-2.0.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
     </Lib>
